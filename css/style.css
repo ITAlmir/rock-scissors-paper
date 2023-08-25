@@ -1,0 +1,120 @@
+body {
+    font-size: clamp(12px,4vw,28px);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    min-height: 100vh;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    word-wrap: break-word;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60%;
+}
+.header img{
+   width: 30%;
+}
+.header>hr{
+    width: 94vw;
+    border-color: red;
+}
+.newGameButton{
+    background-color:darkblue; 
+    color: white; 
+    font-weight: 900; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    cursor: pointer;
+ }
+ .newGameButton:hover{
+    background-color: blue;
+ }
+ .game-section{
+   padding-left: 0;
+   display: flex;
+   flex-direction: row;
+    width: 60%;
+    height: 310px;
+    justify-content: space-between;
+ }
+ .my-container{
+   text-align: center;
+ }
+ .game-icons{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+    height: 290px;
+ }
+ .game-icons img:hover{
+   border: solid red 2px;
+}
+ .game-icons img{
+    width: 80px;
+    margin: 10px;
+    border:solid black 1px ;
+    cursor: pointer;
+ }
+ .my-img{
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+   padding: 0;
+   width: 290px;
+   height: 290px;
+   background-color: darkcyan;
+   text-align:center;
+ }
+ .large-image {
+   width: auto;
+   height: 290px;
+   border: 1px solid #ccc;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ .slideshow-container {
+   position: relative;
+   width: 290px;
+   height: 290px;
+   max-width: 50%;
+   margin: 0;
+   padding: 0;
+ }
+ .slideshow-container p{
+   text-align: center;
+ }
+ .slideshow-container img{
+   padding: 0;
+   margin: 0;
+   width: 290px;
+   height: 290px;
+ }
+ .slide {
+   display: none;
+ }
+ .fade {
+   padding: 0;
+   animation-name: fade;
+   animation-duration: 3s;
+ }
+ .hidden{
+ display: none;
+ }
+ 
+ @keyframes fade {
+   from {
+     opacity: 1;
+   }
+   to {
+     opacity: 0;
+   }
+ }
