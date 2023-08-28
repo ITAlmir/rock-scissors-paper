@@ -6,8 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: auto;
-    min-height: 100vh;
+    margin-top: auto;  
     text-overflow: ellipsis;
     white-space: wrap;
     word-wrap: break-word;
@@ -17,9 +16,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 60%;
 }
-.header img{
+#transition-img{
    width: 30%;
 }
 .header>hr{
@@ -38,16 +36,57 @@ body {
  .newGameButton:hover{
     background-color: blue;
  }
+ .roundsCount{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+  border: 1px solid brown;
+  border-radius: 20px;
+  padding: 5px;
+  background-color: lightslategray;
+  font-size: 50%;
+ }
+ .roundsCount input{
+  width: 30%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+ }
+ .roundsCount button{
+  background-color:chocolate; 
+  color: white; 
+  font-weight: 900; 
+  border: none; 
+  border-radius: 10px; 
+  padding: 10px; 
+  margin-top: 2px;
+  cursor: pointer;
+  width: 50%;
+ }
  .game-section{
    padding-left: 0;
    display: flex;
    flex-direction: row;
     width: 60%;
-    height: 310px;
+    height: 30%;
     justify-content: space-between;
+    background-color: lightslategray;
+    padding: 50px;
+    border-radius: 20px;
+    color: darkblue;
+ }
+ .game-section > :first-child{
+  flex-direction: column;
+  color: red;
  }
  .my-container{
    text-align: center;
+ }
+ .my-container :last-child,.slideshow-container :last-child{
+  color: red;
  }
  .game-icons{
     display: flex;
@@ -55,6 +94,7 @@ body {
     align-items:flex-start;
     justify-content: space-between;
     height: 290px;
+    transition: background-color 0.5s ease;
  }
  .game-icons img:hover{
    border: solid red 2px;
@@ -81,6 +121,34 @@ body {
    border: 1px solid #ccc;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
  }
+ .highlight {
+  background-color: black;
+  color: white;
+  width: 30%;
+  padding: 20px;
+  opacity: 0.9;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+.game-tips{
+  background-color: red;
+  color: white;
+  width: 30%;
+  padding: 20px;
+  opacity: 0.7;
+  border-radius: 20px;
+  text-align: center;
+}
+.game-tips-upper{
+  background-color: red;
+  color: white;
+  padding: 10px;
+  opacity: 0.7;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 50%;
+}
  .slideshow-container {
    position: relative;
    width: 290px;

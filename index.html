@@ -7,24 +7,34 @@
 </head>
 <body>
     <header class="header">
-        <h1>Game  Zone</h1>
-        <h2>Schere, Stein, Papier! </h2>
-        <img src="images/rpscl-bg.jpg" alt="game">
+        <h1>Schere, Stein, Papier! </h1>
+        <img src="images/rpscl-bg.jpg" id="transition-img" alt="game" >
         <br>
-        <button type="button" class="newGameButton"> Start new game!</button>
+        <button type="button" class="newGameButton" onclick=startNewGame()> Start new game!</button>
+        <form action="" class="roundsCount hidden" id="round-count">
+            <p>How many rounds do you want to play?</p>
+            <input type="text" id="rounds" name="rounds">     
+            <button type="button" id="submit-btn">submit</button>  
+        </form> 
+        <p class="highlight hidden" id="highlight"></p>
         <hr>
     </header>
-    <section class="game-section">
+    <p id="rounds-left"></p>
+    <p class="game-tips-upper hidden" id="game-tips-upper">Please choose Rock / Paper or Scissors</p>
+
+    <section class="game-section hidden" id="game-section">
         <div class="game-icons" id="game-icons">
             <img id="0" class="thumbnail" src="images/scissors.jpg" alt="scissors">
             <img id="1" class="thumbnail" src="images/rock.png" alt="rock">
             <img id="2" class="thumbnail" src="images/paper.jfif" alt="paper">
+            <p>Options</p>
         </div>
         <div class="my-container">
             <div class="my-img">
                 <img class="large-image" src="images/placeholder-big.jpg" alt="Large Image">
             </div>
             <p>YOU</p>
+            <p class="scores" id="my-score">0</p>
         </div>       
         <div class="slideshow-container" id="slideshow-container">
             <div class="slide fade">
@@ -37,14 +47,17 @@
               <img src="images/paper.jfif" alt="paper">
             </div>
             <p>CPU</p>
+            <p class="cpu-score" >0</p>
         </div>
         <div class="my-container hidden" id="comp-container">
             <div class="my-img">
                 <img class="large-image" id="comp-lage-img" src="images/placeholder-big.jpg" alt="Large Image">
             </div>
             <p>CPU</p>
+            <p class="cpu-score" >0</p>
         </div>
     </section>
+    <p class="game-tips hidden" id="game-tips"></p>
     <script src="script.js"></script>
 </body>
 </html>
